@@ -11,20 +11,20 @@ type Token struct {
 
 const (
 	ILLEGAL = "ILLEGAL"
-	EOF = "EOF"
+	EOF     = "EOF"
 
 	// Identifiers and literals
 	IDENT = "IDENT"
-	INT = "INT"
+	INT   = "INT"
 
 	// Operators
-	ASSIGN = "="
-	PLUS = "+"
-	MINUS = "-"
-	BANG = "!"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
 	ASTERISK = "*"
-	SLASH = "/"
-	
+	SLASH    = "/"
+
 	LT = "<"
 	GT = ">"
 
@@ -32,7 +32,7 @@ const (
 	NOT_EQ = "!="
 
 	// Delimiters
-	COMMA = ","
+	COMMA     = ","
 	SEMICOLON = ";"
 
 	LPAREN = "("
@@ -42,22 +42,22 @@ const (
 
 	// Keywords
 	FUNCTION = "FUNCTION"
-	LET = "LET"
-	IF = "IF"
-	ELSE = "ELSE"
-	RETURN = "RETURN"
-	TRUE = "TRUE"
-	FALSE = "FALSE"
+	LET      = "LET"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
 )
 
-var keywords = map[string]TokenType {
-	"fn": FUNCTION,
-	"let": LET,
-	"if": IF,
-	"else": ELSE,
+var keywords = map[string]TokenType{
+	"fn":     FUNCTION,
+	"let":    LET,
+	"if":     IF,
+	"else":   ELSE,
 	"return": RETURN,
-	"true": TRUE,
-	"false": FALSE,
+	"true":   TRUE,
+	"false":  FALSE,
 }
 
 // LookupIdent compares ident against keywords and returns the TokenType
